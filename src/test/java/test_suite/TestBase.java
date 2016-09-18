@@ -9,13 +9,13 @@ import java.io.File;
 public class TestBase {
     protected static File file;
 
-    @BeforeClass
+    @BeforeClass(groups = {"positive", "negative"})
     public void setUp() {
         file = new File("my test file");
 
     }
 
-    @AfterClass
+    @AfterClass(groups = {"positive", "negative"})
     public void tearDown () {
         file.delete();
     }

@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Custom suite">
-  <test verbose="1" name="test_ng_sample\src\test\java" annotations="JDK">
+<suite name="test_suite" verbose="1">
+  <test name="Test 1" annotations="JDK">
+      <groups>
+          <run>
+              <include name="positive" ></include>
+              <include name="negative" ></include>
+          </run>
+          <!--<dependencies>
+              <group name = "positive" depends-on="negative" ></group>
+               закомментировано потому что испльзуется intellijIdea 13 в которой есть баг
+               "Element dependencies is not allowed here"
+          </dependencies>-->
+      </groups>
     <packages>
         <package name="test_suite"> </package>
     </packages>

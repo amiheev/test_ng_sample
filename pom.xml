@@ -45,7 +45,7 @@
                     <version>2.16</version>
                     <configuration>
                         <suiteXmlFiles>
-                            <suiteXmlFile>testng_tests_launcer.xml</suiteXmlFile>
+                            <suiteXmlFile>src/test/resources/testng_tests_launcer.xml</suiteXmlFile>
                         </suiteXmlFiles>
                         <!--<includes>
                             <include>**/Test*.java</include>
