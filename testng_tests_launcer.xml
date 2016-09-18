@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Custom suite">
+  <test verbose="1" name="test_ng_sample\src\test\java" annotations="JDK">
+    <packages>
+        <package name="test_suite"> </package>
+    </packages>
+    </test>
+</suite>
+
