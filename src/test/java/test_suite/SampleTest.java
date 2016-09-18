@@ -11,7 +11,7 @@ public class SampleTest extends TestBase{
         String expectedName = "my test file";
         String actualName = TestBase.file.getName();
         System.out.println("positive ");
-        Assert.assertEquals(expectedName, actualName);
+        Assert.assertEquals(actualName, expectedName);
 
     }
 
@@ -20,7 +20,7 @@ public class SampleTest extends TestBase{
         String expectedName = "my test file";
         String actualName = TestBase.file.getName();
         System.out.println("positive ");
-        Assert.assertEquals(expectedName, actualName);
+        Assert.assertEquals(actualName, expectedName);
     }
 
     @Test(groups = "positive", priority = 1)
@@ -28,7 +28,7 @@ public class SampleTest extends TestBase{
         String expectedName = "my test file";
         String actualName = TestBase.file.getName();
         System.out.println("positive ");
-        Assert.assertEquals(expectedName, actualName);
+        Assert.assertEquals(actualName, expectedName);
     }
 
     @Test(groups = "negative", priority = 2)
@@ -36,7 +36,7 @@ public class SampleTest extends TestBase{
         String expectedName = "fail";
         String actualName = TestBase.file.getName();
         System.out.println("negative ");
-        Assert.assertEquals(expectedName, actualName);
+        Assert.assertEquals(actualName, expectedName);
     }
 
     @Test(groups = "negative", priority = 2)
@@ -44,6 +44,6 @@ public class SampleTest extends TestBase{
         String expectedName = "fail";
         String actualName = TestBase.file.getName();
         System.out.println("negative ");
-        Assert.assertEquals(expectedName, actualName);
+        Assert.assertEquals(actualName, expectedName);
     }
 }
