@@ -6,44 +6,40 @@ import org.testng.annotations.Test;
 public class SampleTest extends TestBase{
 
 
-    @Test(groups = "positive", priority = 1)
-    public void positiveCase1(){
-        String expectedName = "my test file";
-        String actualName = TestBase.file.getName();
-        System.out.println("positive ");
-        Assert.assertEquals(actualName, expectedName);
+    @Test(groups = "positive", priority = 1, dataProviderClass = BookNamesFromFileProvider.class, dataProvider = "loadBookNameFromFile")
+    public void positiveCase1(String fileName){
+        String actualName = file.getName();
+        System.out.println("positiveCase1");
+        Assert.assertEquals(actualName, fileName);
 
     }
 
-    @Test(groups = "positive", priority = 1)
-    public void positiveCase2(){
-        String expectedName = "my test file";
-        String actualName = TestBase.file.getName();
-        System.out.println("positive ");
-        Assert.assertEquals(actualName, expectedName);
+    @Test(groups = "positive", priority = 1, dataProvider = "books")
+    public void positiveCase2(String fileName){
+        String actualName = file.getName();
+        System.out.println("positiveCase2");
+        Assert.assertEquals(actualName, fileName);
     }
 
-    @Test(groups = "positive", priority = 1)
-    public void positiveCase3(){
-        String expectedName = "my test file";
-        String actualName = TestBase.file.getName();
-        System.out.println("positive ");
-        Assert.assertEquals(actualName, expectedName);
+    @Test(groups = "positive", priority = 1, dataProvider = "books")
+    public void positiveCase3(String fileName){
+        String actualName = file.getName();
+        System.out.println("positiveCase3");
+        Assert.assertEquals(actualName, fileName);
     }
 
-    @Test(groups = "negative", priority = 2)
-    public void negativeCase1(){
-        String expectedName = "fail";
-        String actualName = TestBase.file.getName();
-        System.out.println("negative ");
-        Assert.assertEquals(actualName, expectedName);
+    @Test(groups = "negative", priority = 2, dataProvider = "books")
+    public void negativeCase1(String fileName){
+        String actualName = file.getName();
+        System.out.println("negativeCase1");
+        Assert.assertEquals(actualName, fileName);
     }
 
-    @Test(groups = "negative", priority = 2)
-    public void negativeCase2(){
-        String expectedName = "fail";
-        String actualName = TestBase.file.getName();
-        System.out.println("negative ");
-        Assert.assertEquals(actualName, expectedName);
+    @Test(groups = "negative", priority = 2, dataProvider = "books")
+    public void negativeCase2(String fileName){
+        String actualName = file.getName();
+        System.out.println("negativeCase2");
+        Assert.assertEquals(actualName, fileName);
+
     }
 }
