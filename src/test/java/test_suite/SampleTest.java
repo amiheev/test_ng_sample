@@ -1,5 +1,6 @@
 package test_suite;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SampleTest extends TestBase{
@@ -10,6 +11,7 @@ public class SampleTest extends TestBase{
         String expectedName = "my test file";
         String actualName = TestBase.file.getName();
         System.out.println("positive ");
+        Assert.assertEquals(expectedName, actualName);
 
     }
 
@@ -18,6 +20,7 @@ public class SampleTest extends TestBase{
         String expectedName = "my test file";
         String actualName = TestBase.file.getName();
         System.out.println("positive ");
+        Assert.assertEquals(expectedName, actualName);
     }
 
     @Test(groups = "positive", priority = 1)
@@ -25,13 +28,15 @@ public class SampleTest extends TestBase{
         String expectedName = "my test file";
         String actualName = TestBase.file.getName();
         System.out.println("positive ");
+        Assert.assertEquals(expectedName, actualName);
     }
 
     @Test(groups = "negative", priority = 2)
     public void negativeCase1(){
-        String expectedName = "my test file";
+        String expectedName = "fail";
         String actualName = TestBase.file.getName();
         System.out.println("negative ");
+        Assert.assertEquals(expectedName, actualName);
     }
 
     @Test(groups = "negative", priority = 2)
@@ -39,5 +44,6 @@ public class SampleTest extends TestBase{
         String expectedName = "fail";
         String actualName = TestBase.file.getName();
         System.out.println("negative ");
+        Assert.assertEquals(expectedName, actualName);
     }
 }
